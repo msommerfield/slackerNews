@@ -4,9 +4,12 @@ const slackerController = {
     index: (req, res) => {
     //   Slacker.find().then(shops => {
         res.send("testing testing 123")
-    }
+    },
+    new: (req, res) => {
+        res.send("testing testing 123")
+
+   
 }
-
-
+}
 module.exports = slackerController
 
