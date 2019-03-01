@@ -1,0 +1,1 @@
+const Slacker = require(`../models/Slacker.js`)
