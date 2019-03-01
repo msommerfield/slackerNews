@@ -7,25 +7,34 @@ const slackerController = {
           })
     },
     new: (req, res) => {
-        res.send("testing testing 123")
-
+        res.render(`new`)
     },
     create: (req, res) => {
-        res.send("i bought a frog")
-
-    },
+        Slacker.create(req.body).then(slack => {
+            res.redirect('/')
+          })
+        },
     show: (req, res) => {
-        res.send("i bought a foot")
-    },
+        Slacker.findById(req.params.slackId).then(slack => {
+            res.render('show', {slack})
+          })
+        },
     edit: (req, res) => {
-        res.send("i bought a fool")
-    },
+        Slacker.findById(req.params.slackId).then(slack => {
+            res.render('edit', {slack})
+          })
+        },
     update: (req, res) => {
-        res.send("i bought a freak")
-    },
+        Slack.findByIdAndUpdate(req.params.slackId, req.body, {new: true}).then(() => {
+            res.redirect(`/${req.params.slackId}`)
+          })
+        },
     delete: (req, res) => {
-        res.send("i bought a horse")
-    }    
-}
+        Slack.findByIdAndDelete(req.params.slackId).then(() => {
+            console.log(`Deleted slack with the id of ${req.params.slackId}`)
+            res.redirect(`/`)
+          })
+        }
+      }
 module.exports = slackerController
 
