@@ -8,18 +8,12 @@ const slackerController = require('../controllers/slackerController.js')
 
 
 router.get('/', slackerController.index)
-router.get('/new', slackerController.new)
-router.post('/', slackerController.create)
-router.get('/:slackId', slackerController.show)
-router.get('/:slackId/edit', slackerController.edit)
-router.put('/:slackId', slackerController.update)
-router.delete('/:slackId', slackerController.delete)
-
-
-
-
-
-
+// router.get('/new', slackerController.new)
+// router.post('/', slackerController.create)
+// router.get('/:slackId', slackerController.show)
+// router.get('/:slackId/edit', slackerController.edit)
+// router.put('/:slackId', slackerController.update)
+// router.delete('/:slackId', slackerController.delete)
 
 
 
