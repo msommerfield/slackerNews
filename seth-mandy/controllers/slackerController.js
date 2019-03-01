@@ -18,7 +18,13 @@ const slackerController = {
     },
     edit: (req, res) => {
         res.send("i bought a fool")
-    }
+    },
+    update: (req, res) => {
+        res.send("i bought a freak")
+    },
+    delete: (req, res) => {
+        res.send("i bought a horse")
+    }    
 }
 module.exports = slackerController
 
