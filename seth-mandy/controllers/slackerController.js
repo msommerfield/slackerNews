@@ -8,7 +8,10 @@ const slackerController = {
     new: (req, res) => {
         res.send("testing testing 123")
 
-   
+},
+    create: (req, res) => {
+        res.send("i bought a frog")
+
 }
 }
 module.exports = slackerController
