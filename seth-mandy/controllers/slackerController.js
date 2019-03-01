@@ -15,7 +15,10 @@ const slackerController = {
     },
     show: (req, res) => {
         res.send("i bought a foot")
-}
+    },
+    edit: (req, res) => {
+        res.send("i bought a fool")
+    }
 }
 module.exports = slackerController
 
