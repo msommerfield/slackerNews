@@ -25,12 +25,12 @@ const slackerController = {
           })
         },
     update: (req, res) => {
-        Slack.findByIdAndUpdate(req.params.slackId, req.body, {new: true}).then(() => {
+        Slacker.findByIdAndUpdate(req.params.slackId, req.body, {new: true}).then(() => {
             res.redirect(`/${req.params.slackId}`)
           })
         },
     delete: (req, res) => {
-        Slack.findByIdAndDelete(req.params.slackId).then(() => {
+        Slacker.findByIdAndDelete(req.params.slackId).then(() => {
             console.log(`Deleted slack with the id of ${req.params.slackId}`)
             res.redirect(`/`)
           })
