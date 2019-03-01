@@ -1,5 +1,5 @@
 const mongoose = require("./connection.js");
-const Shop = require("../models/Slacker.js");
+const Slacker = require("../models/Slacker.js");
 
 const sloth = {
     url: "https://en.wikipedia.org/wiki/Sloth",
